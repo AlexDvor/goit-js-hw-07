@@ -4,25 +4,29 @@ const lengthCategoriesRef = allCategoriesRef.length
 
 console.log(`В списке ${lengthCategoriesRef} категории.`)
 
-// -------------------------------------------------------------------
 
-const allTitleRef = categoriesRef.querySelectorAll('h2');
+const getElement = () => {
+   allCategoriesRef.forEach(item => {
+        const name = item.querySelector('h2').textContent;
+        const quantity = item.querySelector('ul').children.length;
+        console.log(`Категория: ${name}`);
+        console.log(`Количество элементов: ${quantity}`);
+    })
+}
 
-const element = allTitleRef.forEach((element) => {
-    console.log(`Категория: ${element.textContent}`);
-});
-
-
-
-
-const listRef = categoriesRef.querySelectorAll('ul');
-
-const result = listRef.forEach((element) => {
-    console.log(`Количество элементов: ${element.children.length}`);
-});
+getElement(categoriesRef);
 
 
 
 
-// -------------------------------------------------------
+// const getElement = elements => {
+//     [...elements.children].forEach(item => {
+//         const name = item.querySelector('h2').textContent;
+//         const quantity = item.querySelector('ul').children.length;
+//         console.log(`Категория: ${name}`);
+//         console.log(`Количество элементов: ${quantity}`);
+//     })
+// }
+
+// getElement(categoriesRef);
 
