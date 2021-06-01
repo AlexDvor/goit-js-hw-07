@@ -48,14 +48,12 @@ const makeImgMarkup = image => {
   `
 }
 
+
 const galleryRef = document.querySelector("#gallery")
 
-const makeImageGallery = images
-  .map(makeImgMarkup)
-  .join('');
+const makeImageGallery = images.map(makeImgMarkup).join('');
 
-
-galleryRef.insertAdjacentHTML('beforeend', makeImageGallery)
+galleryRef.insertAdjacentHTML('beforeend', makeImageGallery);
 
 
 galleryRef.style.listStyle = 'none';
