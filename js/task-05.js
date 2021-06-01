@@ -13,3 +13,5 @@ function onButtonClick(event) {
     outputRef.textContent = 'незнакомец'
   }
 };
+
+
