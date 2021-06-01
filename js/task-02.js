@@ -13,15 +13,16 @@ const listElementRef = document.createElement('ul')
 document.body.append(listElementRef);
 
 
-const ingredientsCreat = ingredients.map(option => {
+
+const ingredientsCreat = array => array.map(option => {
     const itemElementRef = document.createElement('li');
     itemElementRef.textContent = option;
-    listElementRef.appendChild(itemElementRef);
+    listElementRef.append(itemElementRef);
     return itemElementRef;
     
 });
 
-console.log(ingredientsCreat);
+console.log(ingredientsCreat(ingredients));
 
 
 
