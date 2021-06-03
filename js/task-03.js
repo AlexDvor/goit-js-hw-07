@@ -38,26 +38,47 @@ const images = [
 // console.log(imagesElementCreat(images));
 
 
-
-
-
-
-const makeImgMarkup = image => {
-  return `
-    <li><img src = "${image.url}" alt = "${image.alt}" width = 400></img></li>
-  `
-}
-
-
 const galleryRef = document.querySelector("#gallery")
 
-const makeImageGallery = images.map(makeImgMarkup).join('');
+const newArray = [];
+
+for (const img of images) {
+  const string = `
+      <li><img src = "${img.url}" alt = "${img.alt}" width = 400></img></li>
+    `
+  newArray.push(string);
+
+}
+
+const makeImageGallery = newArray.join(' ');
 
 galleryRef.insertAdjacentHTML('beforeend', makeImageGallery);
-
-
 galleryRef.style.listStyle = 'none';
-galleryRef.style.display = 'flex';
+
+
+
+
+// const string = `
+//       <li><img src = "${array.url}" alt = "${array.alt}" width = 400></img></li>
+//     `
+
+
+// const makeImgMarkup = image => {
+//   return `
+//     <li><img src = "${image.url}" alt = "${image.alt}" width = 400></img></li>
+//   `
+// }
+
+
+// const galleryRef = document.querySelector("#gallery")
+
+// const makeImageGallery = images.map(makeImgMarkup).join('');
+
+// galleryRef.insertAdjacentHTML('beforeend', makeImageGallery);
+
+
+// galleryRef.style.listStyle = 'none';
+// galleryRef.style.display = 'flex';
 
 
 
