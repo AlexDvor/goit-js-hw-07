@@ -2,7 +2,7 @@ const fontSizeControl = document.querySelector('#font-size-control');
 const textSize = document.querySelector('#text');
 
 
-fontSizeControl.addEventListener('click',onInputClick);
+fontSizeControl.addEventListener('input',onInputClick);
 
 function onInputClick(event) {
     const rangeValue = event.currentTarget.value;

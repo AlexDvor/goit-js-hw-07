@@ -5,23 +5,21 @@ const inputRef = document.querySelector('#validation-input');
 inputRef.addEventListener('blur', onInputBlur);
 
 
-function onInputBlur(event) {
+function getClass(add, remove) {
+    inputRef.classList.add(add);
+    inputRef.classList.remove(remove);
+ }
 
+function onInputBlur(event) {
+    
     const elValueLength = event.currentTarget.value.length;
     const dataLength = Number(event.currentTarget.getAttribute('data-length'));
-
     
     if (elValueLength === dataLength) {
-        inputRef.classList.add('valid') 
-        inputRef.classList.remove('invalid') 
+        getClass ('valid', 'invalid')  
     }
 
     if (elValueLength !== dataLength) {
-        inputRef.classList.add('invalid') 
-        inputRef.classList.remove('valid') 
-   }
-    
-   
+        getClass ('invalid', 'valid')
+   } 
 }
-
-

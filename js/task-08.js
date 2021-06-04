@@ -14,7 +14,8 @@ function createBoxes(amount) {
     for (let i = 0; i < amount; i++){
         const creatEl = document.createElement('div');
         creatEl.style.backgroundColor = rand;
-        creatEl.style.marginBottom = '25px'
+        creatEl.style.marginTop = '20px'
+        creatEl.style.marginBottom = '20px'
         creatEl.style.width = '30px';
         creatEl.style.height = '30px';
         box.append(creatEl);
