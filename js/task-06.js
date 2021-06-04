@@ -5,9 +5,9 @@ const inputRef = document.querySelector('#validation-input');
 inputRef.addEventListener('blur', onInputBlur);
 
 
-function getClass(add, remove) {
-    inputRef.classList.add(add);
-    inputRef.classList.remove(remove);
+function getClass(addClass, removeClass) {
+    inputRef.classList.add(addClass);
+    inputRef.classList.remove(removeClass);
  }
 
 function onInputBlur(event) {
