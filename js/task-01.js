@@ -15,18 +15,3 @@ const getElement = () => {
 }
 
 getElement(categoriesRef);
-
-
-
-
-// const getElement = elements => {
-//     [...elements.children].forEach(item => {
-//         const name = item.querySelector('h2').textContent;
-//         const quantity = item.querySelector('ul').children.length;
-//         console.log(`Категория: ${name}`);
-//         console.log(`Количество элементов: ${quantity}`);
-//     })
-// }
-
-// getElement(categoriesRef);
-
